@@ -15,7 +15,7 @@ logger.addHandler(logs)
 
 args = argparse.ArgumentParser()
 
-# These will be job parameters or if you dont want to pass any parameter you  can set buildWithParameters=False ( line no 30 )
+# These will be job parameters. if you dont want to pass any parameter you can set buildWithParameters=False and ignore the below ( line no 33 )
 args.add_argument("-i", "--abc", required=True)
 args.add_argument("-d", "--def", required=True)
 args.add_argument("-H", "--ghi", required=True)
@@ -25,8 +25,11 @@ args = args.parse_args()
 job_name = "<job_name>"
 jenkins_url = "<jenkins_url>"
 jenkins_user = "<jenkins_usr>"
+
+# to get the jenkins token go to <jenkins_url>/user/<ur_jenkins_login_id>/configure
+# Under the API Token click on Add New Token and use that token as jenkins_pwd below.
 jenkins_pwd = "<jenkins_token>"
-# to get the jenkins token go to 
+
 buildWithParameters = True
 job_poll_interval = 20
 job_poll_attempts = 1
