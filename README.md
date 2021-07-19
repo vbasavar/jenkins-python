@@ -3,7 +3,9 @@
 Script functionality
 
 1 ) Trigger a jenkins job using the token
+
 2 ) Wait for the job to complete
+
 3 ) Fetch job id and output console.
 
 
