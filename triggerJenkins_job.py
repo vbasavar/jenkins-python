@@ -4,7 +4,7 @@ import re
 import time
 import argparse
 import logging
-logger = logging.getLogger("dbusercreation")
+logger = logging.getLogger("<meaningful_title>")
 logger.setLevel(logging.DEBUG)
 
 logs=logging.StreamHandler()
