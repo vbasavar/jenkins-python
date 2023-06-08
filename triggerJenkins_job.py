@@ -45,7 +45,8 @@ auth = (jenkins_user, jenkins_pwd)
 
 
 # Triggers jenkins job.
-# buildWithParameters ignore this parameter if you wish you dont want to pass any parameters to the jenkins job.
+# Use /buildWithParameters? : Build the job with parameters
+# Use /build? : Build without the parameters
 def trigger_jenkins_job(jenkins_url, job_name, job_params, auth):
     response = requests.post(jenkins_url + "/job/" + job_name + "/buildWithParameters?", auth=auth, params=job_params,
                              verify=False)
